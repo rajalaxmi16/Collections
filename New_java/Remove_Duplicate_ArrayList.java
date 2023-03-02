@@ -1,0 +1,33 @@
+package src.com.New_java;
+
+import java.util.*;
+import java.util.List;
+
+public class Remove_Duplicate_ArrayList {
+
+	public static void main(String[] args) 
+	{
+		List<Customer> li=new ArrayList<>();
+		
+		Customer c1=new Customer(1000,"Sht");
+		Customer c2=new Customer(2000,"Sht");
+		Customer c3=new Customer(1000,"jhy");
+		
+		li.add(c1);
+		li.add(c2);
+		li.add(c3);
+		
+		for(int i=0; i<li.size(); i++)
+		{
+			for(int j=i+1; j<li.size(); j++)
+			{
+				if(li.get(i).equals(li.get(j)))
+				{
+					li.remove(j);
+				}
+			}
+		}
+		System.out.println(li);
+	}
+
+}
